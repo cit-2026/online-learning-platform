@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register as a student at CHAND INSTITUTE OF TECHNOLOGY.">
+  <title>Student Registration | CIT</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #eaf2ff, #f8fbff);
+      color: #17345c;
+      min-height: 100vh;
+      padding: 25px 15px;
+    }
+
+    header {
+      text-align: center;
+      margin: 10px auto 25px;
+    }
+
+    header h1 {
+      color: #0755a0;
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #5c6c82;
+    }
+
+    .container {
+      max-width: 520px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(20, 55, 100, 0.12);
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .intro {
+      text-align: center;
+      color: #66758b;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd6e5;
+      border-radius: 7px;
+      font-size: 15px;
+      background: white;
+    }
+
+    input:focus, select:focus {
+      outline: 2px solid #8ec5ff;
+      border-color: #0878d1;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #0755a0, #0878d1);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.92;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .login-link a, .back-link {
+      color: #0755a0;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 12px;
+      border-radius: 7px;
+      background: #fff4d6;
+      color: #785500;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 13px;
+      color: #66758b;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 22px 18px;
+      }
+
+      header h1 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CHAND INSTITUTE OF TECHNOLOGY</h1>
+    <p>Learn • Practice • Innovate • Succeed</p>
+  </header>
+
+  <main class="container">
+    <h2>Create Your Student Account</h2>
+
+    <p class="intro">
+      Fill in your details to begin your learning journey.
+    </p>
+
+    <form id="registerForm">
+
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Enter your full name"
+          autocomplete="name"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter your phone number"
+          autocomplete="tel"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="course">Select Your Course</label>
+        <select id="course" name="course" required>
+          <option value="">-- Choose a course --</option>
+          <option value="Basic Computer Skills">Basic Computer Skills</option>
+          <option value="Microsoft Office">Microsoft Office</option>
+          <option value="Web Design and Development">Web Design and Development</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Computer Programming">Computer Programming</option>
+          <option value="Cyber Security">Cyber Security</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Create Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="At least 8 characters"
+          minlength="8"
+          autocomplete="new-password"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          placeholder="Enter your password again"
+          minlength="8"
+          autocomplete="new-password"
+          required
+        >
+      </div>
+
+      <button type="submit">CREATE ACCOUNT</button>
+
+      <p id="message" role="status" aria-live="polite"
+         style="margin-top:15px;text-align:center;"></p>
+
+    </form>
+
+    <div class="notice">
+      <strong>Important:</strong> This is the initial registration page.
+      Account creation and saving student details will work after we
+      connect the form to Supabase.
+    </div>
+
+    <p class="login-link">
+      Already have an account?
+      <a href="login.html">Student Login</a>
+    </p>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
+  </main>
+
+  <footer>
+    &copy; 2026 CHAND INSTITUTE OF TECHNOLOGY
+  </footer>
+
+  <script>
+    const form = document.getElementById("registerForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const password = document.getElementById("password").value;
+      const confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+      if (password !== confirmPassword) {
+        message.style.color = "#c62828";
+        message.textContent = "Passwords do not match. Please try again.";
+        return;
+      }
+
+      message.style.color = "#8a5b00";
+      message.textContent =
+        "The form is ready. Account creation will be enabled after Supabase integration.";
+    });
+  </script>
+
+</body>
+</html>
